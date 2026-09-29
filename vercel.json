@@ -1,13 +1,17 @@
 {
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "api/index.php"
+      "source": "/",
+      "destination": "/data/nilai.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/data/nilai.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
