@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-// Penanganan path file JSON yang aman untuk Vercel
+// Menentukan lokasi file nilai.json
 $possiblePaths = [
     __DIR__ . '/../data/nilai.json',
     $_SERVER['DOCUMENT_ROOT'] . '/data/nilai.json',
